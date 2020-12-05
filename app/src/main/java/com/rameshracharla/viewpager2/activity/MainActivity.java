@@ -11,15 +11,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.rameshracharla.viewpager2.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button viewpagertablayout;
+    private Button viewpagertablayout, viewpagerrecyclerview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewpagertablayout = (Button) findViewById(R.id.viewpagertablayout);
+        viewpagerrecyclerview = (Button) findViewById(R.id.viewpagerrecyclerview);
 
         viewpagertablayout.setOnClickListener(this);
+        viewpagerrecyclerview.setOnClickListener(this);
     }
 
     @Override
@@ -29,10 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent i = new Intent(MainActivity.this, ViewPagerWithTablayout.class);
                 startActivity(i);
                 break;
-
-
             case R.id.viewpagerrecyclerview:
-
+                Intent vr = new Intent(MainActivity.this, ViewPagerWithRecyclerview.class);
+                startActivity(vr);
                 break;
         }
     }

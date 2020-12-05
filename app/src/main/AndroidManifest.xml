@@ -20,6 +20,9 @@
         <activity
             android:name=".activity.ViewPagerWithTablayout"
             android:label="ViewPager2 With Tablayout" />
+        <activity
+            android:name=".activity.ViewPagerWithRecyclerview"
+            android:label="ViewPager2 With Recyclerview" />
     </application>
 
 </manifest>
